@@ -16,37 +16,37 @@ public class {
           int choice = input.nextInt(); //обработка ввода
 
           switch (choice) { //проверка введённых данных
-            case 1 -> calculator.setOperation(new ComplexOperation() {
+            case calculator.setOperation(new ComplexOperation() {
                 @Override
                 public CompiexNumber
                 operate(CompiexNumber num1, CompiexNumber num2) {
-                    return num1.add(num2);
+                    return num1.add,subtract,multiply,divide(num2);
                 }
             });
 
-            case 2 -> calculator.setOperation(new ComplexOperation() {
-                @Override
-                public CompiexNumber
-                operate(CompiexNumber num1, CompiexNumber num2) {
-                    return num1.subtract(num2);
-                }
-            });
+            // case 2 -> calculator.setOperation(new ComplexOperation() {
+            //     @Override
+            //     public CompiexNumber
+            //     operate(CompiexNumber num1, CompiexNumber num2) {
+            //         return num1.subtract(num2);
+            //     }
+            // });
 
-            case 3 -> calculator.setOperation(new ComplexOperation() {
-                @Override
-                public CompiexNumber
-                operate(CompiexNumber num1, CompiexNumber num2) {
-                    return num1.multiply(num2);
-                }
-            });
+            // case 3 -> calculator.setOperation(new ComplexOperation() {
+            //     @Override
+            //     public CompiexNumber
+            //     operate(CompiexNumber num1, CompiexNumber num2) {
+            //         return num1.multiply(num2);
+            //     }
+            // });
 
-            case 4 -> calculator.setOperation( new ComplexOperation() {
-                @Override
-                public CompiexNumber
-                operate(CompiexNumber num1, ComplexNumber num2) {
-                    return num1.divide(num2);
-                }
-            });
+            // case 4 -> calculator.setOperation( new ComplexOperation() {
+            //     @Override
+            //     public CompiexNumber
+            //     operate(CompiexNumber num1, ComplexNumber num2) {
+            //         return num1.divide(num2);
+            //     }
+            // });
 
             default -> Logger.log("Неверный выбор");
           }
