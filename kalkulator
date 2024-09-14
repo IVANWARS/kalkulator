@@ -16,7 +16,7 @@ public class {
           int choice = input.nextInt(); //обработка ввода
 
           switch (choice) { //проверка введённых данных
-            case calculator.setOperation(new ComplexOperation() {
+            case 1 -> calculator.setOperation(new ComplexOperation() {
                 @Override
                 public ComplexNumber
                 operate(ComplexNumber num1, ComplexNumber num2) {
