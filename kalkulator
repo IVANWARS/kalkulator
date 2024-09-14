@@ -1,8 +1,8 @@
 public class {
-    public static void main(Str[] args) {
-        Scanner input = Scanner(System.in);
+    public static void calculator(Str[] args) {
+        Scanner input = new Scanner(System.in);
 
-        CompiexNumber num1 = new ComplexNumber(3.0,2.0); //число №1 для ввода
+        ComplexNumber num1 = new ComplexNumber(3.0,2.0); //число №1 для ввода
           ComplexNumber num2 = new ComplexNumber(1.0,5.0); //число для ввода
 
           Calculator calculator = new Calculator();
@@ -18,35 +18,35 @@ public class {
           switch (choice) { //проверка введённых данных
             case calculator.setOperation(new ComplexOperation() {
                 @Override
-                public CompiexNumber
-                operate(CompiexNumber num1, CompiexNumber num2) {
-                    return num1.add,subtract,multiply,divide(num2);
+                public ComplexNumber
+                operate(ComplexNumber num1, ComplexNumber num2) {
+                    return num1.add(num2);
                 }
             });
 
-            // case 2 -> calculator.setOperation(new ComplexOperation() {
-            //     @Override
-            //     public CompiexNumber
-            //     operate(CompiexNumber num1, CompiexNumber num2) {
-            //         return num1.subtract(num2);
-            //     }
-            // });
+             case 2 -> calculator.setOperation(new ComplexOperation() {
+                @Override
+                 public ComplexNumber
+                 operate(ComplexNumber num1, ComplexNumber num2) {
+                     return num1.subtract(num2);
+                }
+             });
 
-            // case 3 -> calculator.setOperation(new ComplexOperation() {
-            //     @Override
-            //     public CompiexNumber
-            //     operate(CompiexNumber num1, CompiexNumber num2) {
-            //         return num1.multiply(num2);
-            //     }
-            // });
+             case 3 -> calculator.setOperation(new ComplexOperation() {
+                 @Override
+                 public ComplexNumber
+                 operate(ComplexNumber num1, ComplexNumber num2) {
+                    return num1.multiply(num2);
+                 }
+             });
 
-            // case 4 -> calculator.setOperation( new ComplexOperation() {
-            //     @Override
-            //     public CompiexNumber
-            //     operate(CompiexNumber num1, ComplexNumber num2) {
-            //         return num1.divide(num2);
-            //     }
-            // });
+             case 4 -> calculator.setOperation( new ComplexOperation() {
+                 @Override
+                 public ComplexNumber
+                 operate(ComplexNumber num1, ComplexNumber num2) {
+                     return num1.divide(num2);
+                 }
+             });
 
             default -> Logger.log("Неверный выбор");
           }
